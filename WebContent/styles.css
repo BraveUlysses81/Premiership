@@ -1,0 +1,177 @@
+body, nav, header, table, form, ul, a{
+	margin: 0;
+	padding: 0;
+	border:none;
+	text-decoration: none;
+	float: none;
+}
+
+ol{
+	margin-left: 12em;
+	margin-right: 1em;
+}
+ol li{
+	padding: 1%;
+}
+
+#welcome{
+	margin-right: 1em;
+}
+
+table{
+	table-layout: fixed;
+}
+
+table, th, td {
+    width: 60%;
+    border: 2px solid hotpink;
+}
+
+tr {
+    height: 30px;
+}
+
+th,
+td {	
+    text-align: center;
+    font-size: 20px;
+}
+
+th{
+	background-color: #38003c;
+	color: white;
+}
+
+th.home, th.away{
+	width: 45%;
+}
+
+th.conf{
+	width: 10%;
+}
+
+th.pick{
+	width: 70%;
+}
+
+th.wager{
+	width: 30%;
+}
+
+nav {
+	float: left;
+    margin: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li a {
+    display: block;
+    width: 8em;
+    line-height: 2em;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #38003c;
+    color: white;
+    padding: .2em 1em .2em 1em;
+    margin-bottom: .2em;
+}
+
+li a:hover {
+    background-color: hotpink;
+    border-left: .4em solid white;
+    width: 7.6em;
+}
+
+header {
+    font-size: 54px;
+    text-align: center;
+    color: #38003c;
+}
+
+form {
+    object-position: center;
+    width: 100%;
+}
+
+button{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	border: none;
+	width: inherit;
+	height: inherit;
+	background: #38003c;
+}
+
+button:hover{
+	background: #ff005a;
+}
+
+button#submitPicks{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	border: none;
+	width: 60%;
+	height: 50px;
+	background: #ff005a;
+	margin-left: 223px;
+}
+
+button#submitPicks:hover{
+	background: hotpink;
+}
+
+button#submitLogin{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	border: none;
+	width: 50%;
+	height: 50px;
+	background: #ff005a;
+	justify-content: center;
+	
+}
+
+button#submitLogin:hover{
+	background: hotpink;
+}
+
+#loginMessage{
+	color: #38003c;
+}
+
+caption{
+	font-size: 2em;
+}
+
+#login{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+}
+
+#links{
+	color: #38003c;
+	padding-top: 1.5em;
+}
+
+#links a{
+	margin-top: .4em;
+	margin-bottom: .4em;
+}
+
+#links a:hover{
+	color: #ff005a;
+	font-size: 110%;
+	margin-left: -.2em;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}

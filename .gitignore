@@ -1,0 +1,12 @@
+*.war
+*.jar
+*.zip
+*.tar
+*.class
+*.lst
+.settings/*
+.project
+.classpath
+*.png
+target/*
+log.txt
