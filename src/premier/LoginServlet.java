@@ -80,7 +80,7 @@ public class LoginServlet extends HttpServlet {
 		}
 		
 		if(person == null){
-			request.setAttribute("message", "The login information is incorrect. Please try again or text willie at 9168375713");
+			request.setAttribute("message", "The login information is incorrect. Please try again or text willie at 5126901665");
 			sc.getRequestDispatcher(url).forward(request, response);
 		}
 		

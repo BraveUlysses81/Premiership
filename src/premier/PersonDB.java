@@ -213,6 +213,9 @@ public class PersonDB {
 			catch(Exception ex){
 			trans.rollback();
 			}
+			finally{
+				em.close();
+			}
 		}
 	}
 	

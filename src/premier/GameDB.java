@@ -8,7 +8,7 @@ import javax.persistence.TypedQuery;
 
 public class GameDB {
 
-	public static String insertGame(Game game){
+	public String insertGame(Game game){
 		
 		EntityManager em = DBUtil.getEMF().createEntityManager();
 		EntityTransaction trans = em.getTransaction();
@@ -32,7 +32,7 @@ public class GameDB {
 	}
 	
 	
-	public static List<Game> weekGames(String wk){
+	public List<Game> weekGames(String wk){
 		EntityManager em = DBUtil.getEMF().createEntityManager();
 		String qs = "select g from Game g where g.week = :wk";
 		TypedQuery<Game> tq = em.createQuery(qs, Game.class);
@@ -50,7 +50,7 @@ public class GameDB {
 		return games;
 	}
 	
-	public static List<Game> setWinners(List<Game> games, String win1, String win2, String win3, String win4, String win5,
+	public List<Game> setWinners(List<Game> games, String win1, String win2, String win3, String win4, String win5,
 									String win6, String win7, String win8, String win9, String win10){
 		for(Game g : games){
 			if((g.getGameNo()).equals("g1")){
@@ -88,7 +88,7 @@ public class GameDB {
 	}
 	
 	
-	public static void checkGames (List<Game> games){
+	public void checkGames (List<Game> games){
 		for(Game g : games){
 			if(g.getWinner() == null || (g.getWinner()).equals("")){
 				g.setWins(0);
@@ -107,7 +107,7 @@ public class GameDB {
 		}
 	}
 	
-	public static void updateGames(List<Game> games){
+	public void updateGames(List<Game> games){
 		EntityManager em = DBUtil.getEMF().createEntityManager();
 		EntityTransaction trans = em.getTransaction();
 		for(Game g : games){
@@ -119,10 +119,13 @@ public class GameDB {
 			catch(Exception ex){
 			trans.rollback();
 			}
+			finally{
+				em.close();
+			}
 		}
 	}
 	
-	public static List<Game> personWeekGames(Person person, String wk){
+	public List<Game> personWeekGames(Person person, String wk){
 		EntityManager em = DBUtil.getEMF().createEntityManager();
 		String qs = "select g from Game g where g.week = :wk and g.person = :person";
 		TypedQuery<Game> tq = em.createQuery(qs, Game.class);
