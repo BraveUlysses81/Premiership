@@ -1,5 +1,5 @@
 # premiership
-A web application for competitions of selecting professional soccer game results. It is based in the Java language and uses Servlets and 
+A web application for competitions of selecting professional soccer game results. It is based in the Java language and uses Servlets and the JPA framework to allow a more seamless match with the MySQL database. The allowing for java classes to be treated like objects makes it much easier to write the logic and persist changes to the database. I currently have this application set up on a Digital Ocean VPS that runs basic Apache Tomcat as an application server. The war file is bundled by Maven and uploaded to the server when necessary. Otherwise, the data is kept in the MySQL DB that also exists on Digital Ocean in the same VPS.
 
 #The project files are separated into java code (src/premier) and jsp and others top level code (web content).
 Usernames and Passwords for the entries are already stored in a database. This data can be loaded by running
